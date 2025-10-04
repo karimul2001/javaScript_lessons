@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Flower List</h3>
+    <script>
+        const flowers = ["Rose", "Lotus", "Lily", "Sunflower", "Marigold", "ChinaRose"];
+
+        for (let i = 0; i < flowers.length; i++) {
+            document.write(flowers[i] + "<br>");
+        }
+    </script>
+    <!-- Flower List with loop -->
+    <hr>
+    <script>
+        document.write("<ol>");
+        for (let i = 0; i < flowers.length; i++) {
+            document.write("<li>" + flowers[i] + "</li>");
+        }
+        document.write("</ol>");
+
+    </script>
+    <!-- Flower list with order list -->
+    <hr>
+    <script>
+        let output = "<ul>";
+        for (let i = 0; i < flowers.length; i++) {
+            output += "<li>" + flowers[i] + "</li>";
+        }
+        output += "</ul>";
+        document.write(output);
+
+    </script>
+    <!-- Floower list with unorder list -->
+</body>
+
+</html>
