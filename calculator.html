@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #display {
+            height: 100px;
+            width: 200px;
+            background-color: rgb(130, 158, 158);
+            align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Calculator</h3>
+    <h4>Sum function</h4>
+    <div id="display"></div>
+    <script>
+        function SumFunc(x, y) {
+            x = prompt("Enter first number");
+            y = prompt("Enter second number");
+            x = parseInt(x);
+            y = parseInt(y);
+            z = x + y;
+            document.getElementById("display").innerHTML = "Total is: " + z;
+        }
+        function MultiplyFunc(x, y) {
+            x = prompt("Enter first number");
+            y = prompt("Enter second number");
+            z = x * y;
+            document.getElementById("display").innerHTML = "Multiply is: " + z;
+        }
+        function DivisionFunc(x, y) {
+            x = prompt("Enter first number");
+            y = prompt("Enter second number");
+            z = x / y;
+            document.getElementById("display").innerHTML = "Division is: " + z;
+        }
+    </script><br>
+
+    <button onclick="SumFunc()">SUM</button>
+    <button onclick="MultiplyFunc()">MULTIPLY</button>
+    <button onclick="DivisionFunc()">Division</button>
+</body>
+
+</html>
