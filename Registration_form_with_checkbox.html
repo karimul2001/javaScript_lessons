@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #display{
+            height: 250px;
+            width: 550px;
+            background-color: blueviolet;
+            margin-top: 20px;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Registration Form</h3>
+    <form action="" name="rgs">
+        Name: <br>
+        <input type="text" name="fullname" placeholder="Enter your name"><br>
+        Gender: <br>
+        <input type="radio" name="gender" value="male">Male
+        <input type="radio" name="gender" value="female">Female <br>
+        District: <br>
+        <select name="district" id="">
+            <option value="">Select one</option>
+            <option>Dhaka</option>
+            <option>Khulna</option>
+            <option>Rajshahi</option>
+            <option>Barisal</option>
+            <option>Cumilla</option>
+        </select><br>
+        Address: <br>
+        <textarea name="address" id="" placeholder="Enter your address"></textarea><br>
+        Skills: <br>
+        <input type="checkbox" name="skills" class="skills" value="html">HTML
+        <input type="checkbox" name="skills" class="skills" value="css">CSS
+        <input type="checkbox" name="skills" class="skills" value="javascript">JavaScript
+        <input type="checkbox" name="skills" class="skills" value="php">PHP
+        <input type="checkbox" name="skills" class="skills" value="mysql">MySQL <br>
+        
+        Favorite Game: <br>
+        <input type="checkbox" name="cricket" value="">Cricket <br>
+        <input type="checkbox" name="football" value="">Football <br>
+        <input type="checkbox" name="badminton" value="">Badminton <br>
+        <input type="checkbox" name="handball" value="">Handball <br>
+        <input type="checkbox" name="kabadi" value="">Kabadi <br>
+
+        <button onclick="form_handle()" type="button">Submit</button>
+
+    </form>
+
+    <div id="display"></div>
+
+    <script>
+        
+        function form_handle() {
+            let fname = document.rgs.fullname.value;
+            let gender = document.rgs.gender.value;
+            let district = document.rgs.district.value;
+            let address = document.rgs.address.value;
+            let Skills="";
+            let checkbox = document.getElementsByClassName("Skills");
+            for (let i = 0; i < checkboxes.length; i++) {
+                if(checkboxes[i].checked){
+                    Skills += checkboxes[i].value + ",";
+                }
+            }
+            output = "<h1>" + fname + "</h1>";
+            output += gender;
+            output += Skills;
+
+            //let output="This is " + fname + gender + district + address;
+            document.getElementById("display").innerHTML= output;
+
+
+
+        }
+    </script>
+
+</body>
+
+</html>

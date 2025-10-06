@@ -8,9 +8,18 @@
 </head>
 
 <body>
+    <h3>Function</h3>
+    <div id="display"></div>
     <script>
-        let name = prompt("তোমার নাম কী?");
-        document.write("স্বাগতম, " + name + "!");
+        function SumFunc(x, y) {
+            x = prompt("Enter first number");
+            y = prompt("Enter second number");
+            x = parseInt(x);
+            y = parseInt(y);
+            z = x + y;
+            alert(z);
+        }
+        
 
     </script>
 </body>
