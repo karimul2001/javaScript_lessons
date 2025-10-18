@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #display{
+        #display {
             height: 250px;
             width: 550px;
             background-color: blueviolet;
             margin-top: 20px;
-            
+
         }
     </style>
 </head>
@@ -36,12 +36,12 @@
         Address: <br>
         <textarea name="address" id="" placeholder="Enter your address"></textarea><br>
         Skills: <br>
-        <input type="checkbox" name="skills" class="skills" value="html">HTML
-        <input type="checkbox" name="skills" class="skills" value="css">CSS
-        <input type="checkbox" name="skills" class="skills" value="javascript">JavaScript
-        <input type="checkbox" name="skills" class="skills" value="php">PHP
-        <input type="checkbox" name="skills" class="skills" value="mysql">MySQL <br>
-        
+        <input type="checkbox" name="skills" class="Skills" value="html">HTML
+        <input type="checkbox" name="skills" class="Skills" value="css">CSS
+        <input type="checkbox" name="skills" class="Skills" value="javascript">JavaScript
+        <input type="checkbox" name="skills" class="Skills" value="php">PHP
+        <input type="checkbox" name="skills" class="Skills" value="mysql">MySQL <br>
+
         Favorite Game: <br>
         <input type="checkbox" name="cricket" value="">Cricket <br>
         <input type="checkbox" name="football" value="">Football <br>
@@ -56,25 +56,32 @@
     <div id="display"></div>
 
     <script>
-        
+
         function form_handle() {
             let fname = document.rgs.fullname.value;
             let gender = document.rgs.gender.value;
             let district = document.rgs.district.value;
             let address = document.rgs.address.value;
-            let Skills="";
+            let Skills = "";
+
             let checkbox = document.getElementsByClassName("Skills");
-            for (let i = 0; i < checkboxes.length; i++) {
-                if(checkboxes[i].checked){
-                    Skills += checkboxes[i].value + ",";
+            console.log("checkbox", checkbox);
+
+
+            for (let i = 0; i < checkbox.length; i++) {
+                if (checkbox[i].checked) {
+                    Skills += checkbox[i].value + ",";
                 }
             }
-            output = "<h1>" + fname + "</h1>";
+
+            console.log("checkbox", checkbox);
+
+            output = "<h1>" + fname + "</h1>" + gender + ""
             output += gender;
             output += Skills;
 
             //let output="This is " + fname + gender + district + address;
-            document.getElementById("display").innerHTML= output;
+            document.getElementById("display").innerHTML = output;
 
 
 
