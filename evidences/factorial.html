@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Factorial</h3>
+    <script>
+        const result = prompt("Enter a number")
+
+        const Data = fact(result)
+
+        document.write(Data)
+
+        function fact(n) {
+            let x = 1;
+            for (let i = 1; i <= n; i++) {
+                x *= i;
+            }
+            return n + "'s Factorial " + x;
+        }
+        // document.write(fact(6));
+        document.write(fact(prompt(5)));
+
+    </script>
+    <!-- <script>
+        var sun= 6;
+        document.write(sun++);
+        document.write(sun--);
+        document.write(sun--);
+
+    </script> -->
+</body>
+
+</html>

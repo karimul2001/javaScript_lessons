@@ -9,13 +9,13 @@
     <script>
         function emailvalidation(){
             let pattern = /[a-z0-9._]+@[a-z0-9.-]+\.[a-z]{2,4}$/i;
-            if(document.myForm.email.value.search(pattern)==1){
+            if(document.myForm.email.value.search(pattern)==-1){
                 alert("InValid E-mail");
             }else if(document.myForm.email.value !=document.myForm.conformEmail.value){
                 alert("E-mail Does Not Matching");
             }else{
                 alert("Your E-mail Address Is Fully valid");
-            } 
+            }
         }
     </script>
 
