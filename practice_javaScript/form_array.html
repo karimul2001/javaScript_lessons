@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Form Elements as Array</h3>
+    <form action="">
+        <input type="text" name="fullname" placeholder="Enter Name"> <br>
+        Gender:
+        <input type="radio" name="gender" value="male">Male
+        <input type="radio" name="gender" value="female">Female <br>
+        District: <br>
+        <select name="district" id="">
+            <option value="">Select One</option>
+            <option>Dhaka</option>
+            <option>Jhenaidah</option>
+            <option>Magura</option>
+            <option>Kustia</option>
+            <option>Tangail</option>
+        </select> <br>
+        Address: <br>
+        <textarea name="address" placeholder="enter address"></textarea> <br>
+        <button type="button" onclick="formData()">Submit</button>
+    </form>
+
+    <script>
+        function formData() {
+
+            let dataDisplay = "";
+            for (let i = 0; i < document.forms[0].length; i++) {
+                if (document.forms[0].elements[i].type == "radio") {
+                    if (document.forms[0].elements[i].checked) {
+                        dataDisplay += document.forms[0].elements[i].value + "<br>";
+                    }
+                } else {
+                    dataDisplay += document.forms[0].elements[i].value + "<br>";
+                }
+            }
+            document.getElementById("display").innerHTML = dataDisplay;
+
+            // let data = document.forms[0].fullname.value;
+            // alert("data");
+        }
+    </script>
+
+    <div id="display"></div>
+</body>
+
+</html>

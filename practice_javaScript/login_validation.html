@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Login Form</h3>
+    <form action="" name="loginForm">
+        <input type="text" name="fullname" placeholder="Enter Your Name"> <br>
+        <input type="password" name="password" placeholder="Enter password"> <br>
+        <input type="password" name="conf_password" placeholder="Enter password again"> <br>
+        <button type="button" onclick="loginValidation()">Login</button>
+    </form>
+    <script>
+        function loginValidation(){
+            let fullname = document.loginForm.fullname.value;
+            let password = document.loginForm.password.value;
+            let confpassword = document.loginForm.conf_password.value;
+
+            let errMsg = "";
+
+            if (fullname== ""){
+                errMsg += "Enter Fullname\n";
+            } else if(fullname.length<5 || fullname.length>10) {
+                errMsg += "Fullname must be 5 to 10 characters\n";
+            }
+            if (password== ""){
+                errMsg += "Enter password\n";
+            } else if(password.length<8){
+                errMsg += "At least 8 character\n";
+            }
+            if (confpassword== ""){
+                errMsg += "Enter password again\n";
+            } else if(password!=confpassword){
+                errMsg += "Password doesn't match\n";
+            }
+
+
+
+            // if(errMsg!=""){
+            //     alert(errMsg);
+             else {
+                errMsg += "Login Successful";
+            }
+            // else {
+            //     errMsg += "Login Faild"
+            // }
+            
+            
+            
+            document.getElementById("display").innerHTML = errMsg;
+            // alert(errMsg);
+        }
+        
+    </script>
+    <div id="display" style="height: 100px; width: 250px; background-color: green; color: brown;"></div>
+</body>
+</html>
