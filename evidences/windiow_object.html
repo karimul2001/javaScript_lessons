@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form name="form">
+        <input type="text" name="name" placeholder="Full Name"><br>
+        <input type="number" name="phone" placeholder="Enter Phone"><br>
+        <textarea name="address" placeholder="Enter Address"></textarea><br>
+        Gender:
+        <input type="radio" name="gender" value="male">male
+        <input type="radio" name="gender" value="female">Female <br>
+
+        <a href="#" onclick="mywindow()">Click Here</a>
+    </form>
+
+    <script>
+        function mywindow() {
+            let nameValue = document.form.name.value;
+            let phoneValue = document.form.phone.value;
+            let addressValue = document.form.address.value;
+            let genderValue = document.form.gender.value;
+
+            let x = window.open("", "abc", "width=300,height=200,left=350,top=200");
+            // let output = `
+            //     <h1>All Information</h1>
+            //     Name: ${nameValue} <br>
+            //     Phone: ${phoneValue} <br>
+            //     Address: ${addressValue} <br>
+            //     Gender: ${genderValue} <br>
+            // `;
+            let output = "";
+            output += "<h2>All Information</h2> <br>";
+                
+            output += "Name: " + nameValue + "<br>";
+            output += "Phone: " + phoneValue + "<br>";
+            output += "Address: " + addressValue + "<br>";
+            output += "Gender: " + genderValue + "<br>";
+            x.document.write(output);
+        }
+    </script>
+</body>
+
+</html>

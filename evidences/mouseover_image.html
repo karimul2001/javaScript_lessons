@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var sample2 = new Image();
+        sample2.src = "sample2.jpg";
+        var sample1 = new Image();
+        sample1.src = "sample1.jpg";
+        function switch2() {
+            document.sample.src = sample2.src;
+        }
+        function switch1() {
+            document.sample.src = sample1.src;
+        }
+    </script>
+    <a href="#" onmouseover="switch2()" onmouseout="switch1()"><img src="sample1.jpg" alt=""
+            name="sample" style="width: 300px; height: 400px;"></a>
+
+
+
+    <script>
+        let sample3= new Image();
+        sample3.src="sample3.jpg";
+        let sample4= new Image();
+        sample4.src="sample4.jpg";
+        function switch3(){
+            document.sample5.src = sample3.src;
+        }
+        function switch4(){
+            document.sample5.src = sample4.src;
+        }
+    </script>
+    <a href="#" onmouseover="switch3()" onmouseout="switch4()"><img src="sample3.jpg" name="sample5" alt="" style="width: 300px; height: 400px;"></a>
+</body>
+
+</html>
