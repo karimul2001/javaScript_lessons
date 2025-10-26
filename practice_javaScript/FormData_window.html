@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="form_data.js"></script>
+</head>
+<body>
+    <h2>Address Form</h2>
+    <form name="myform">
+        <input type="text" name="name" placeholder="Enter Name"> <br>
+        <input type="number" name="phone" placeholder="Enter phone"> <br>
+        <textarea name="address" placeholder="Enter Address" id=""></textarea> <br>
+        Gender:
+        <input type="radio" name="gender" value="male">Male
+        <input type="radio" name="gender" value="female">Female <br><br>
+        <select name="District" id="">
+            <option selected>Select One</option>
+            <option>Jhenaidah</option>
+            <option>Magura</option>
+            <option>Cuadanga</option>
+            <option></option>
+        </select>
+        <button type="button" onclick="mydata()">Click to Open</button>
+    </form>
+    <script>
+        function mydata(){
+            let fullname = document.myform.name.value;
+            let phone = document.myform.phone.value;
+            let address = document.myform.address.value;
+            let gender = document.myform.gender.value;
+            //New object Initialize
+            const myobject = new FormData(fullname, phone, address, gender); //Create Object
+            let data = myobject.DataDisplay();
+            let x = window.open("", "abc", "width=400,height=300,top=200,left=450");
+            x.document.write(data);
+        }
+    </script>
+</body>
+</html>

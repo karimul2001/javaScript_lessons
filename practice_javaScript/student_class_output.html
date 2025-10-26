@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="student.js"></script>
+</head>
+<body>
+    <script>
+       const student1 = new StudentClass("Md Karimul Islam", 1293598, "Jhenaidah");
+       const student2 = new StudentClass("Babu", 1293109, "tangail");
+       console.log(student1);
+       console.log(student2);
+
+       let Info = student1.studentInfo();
+       let info = student2.studentInfo();
+
+       document.write(Info,info);
+    </script>
+</body>
+</html>

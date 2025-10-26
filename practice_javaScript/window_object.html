@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form name="myform">
+        <input type="text" name="name" placeholder="enter your name"> <br>
+        <input type="number" name="phone" placeholder="enter your number"> <br>
+        Gender:
+        <input type="radio" name="gender" value="male">male
+        <input type="radio" name="gender" value="female">Female <br>
+        <textarea name="address" placeholder="Enter Address" id=""></textarea> <br>
+        <a href="#" onclick="mywindow()">Click Here</a>
+    </form>
+
+    <script>
+        function mywindow() {
+            let name = document.myform.name.value;
+            let phone = document.myform.phone.value;
+            let gender = document.myform.gender.value;
+            let address = document.myform.address.value;
+            let x = window.open("", "abc", "width=300,height=300,left=300,top=200");
+            let output = "";
+            output += "Name: " + name + "<br>";
+            output += "Phone: " + phone + "<br>";
+            x.document.write(output);
+        }
+    </script>
+</body>
+
+</html>

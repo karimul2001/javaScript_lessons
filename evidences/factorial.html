@@ -16,15 +16,25 @@
 
         // document.write(Data)
 
-        function fact(n) {
-            let x = 1;
-            for (let i = 1; i <= n; i++) {
-                x *= i;
-            }
-            return n + "'s Factorial " + x;
+        // function fact(n) {
+        //     let x = 1;
+        //     for (let i = 1; i <= n; i++) {
+        //         x *= i;
+        //     }
+        //     return n + "'s Factorial " + x;
+        // }
+        // // document.write(fact(6));
+        // document.write(fact(prompt(5)));
+
+      function fact(n) {
+
+        let x = 1 ;
+        for (let i = 1; i <= n; i++){
+            x *= i;
         }
-        // document.write(fact(6));
-        document.write(fact(prompt(5)));
+        return x;
+      }
+      document.write(fact());
 
     </script>
     <!-- <script>

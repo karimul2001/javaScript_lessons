@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Class Template</h3>
+    <script>
+        class carClass {
+            constructor(name, year){
+                this.name = name;
+                this.year = year;
+            }
+        }
+        console.log(carClass);
+        
+        const car1 = new carClass("Toyota", 1990);
+        const car2 = new carClass("Roles Royels", 1993);
+        const car3 = new carClass("BMW", 1980);
+        const car4 = new carClass("Lamborgini", 2000);
+
+        console.log(car1);
+        console.log(car2);
+        console.log(car3);
+        console.log(car4);
+        console.log(car3.name);
+        console.log(car3.year);
+        document.write(car3.name);
+        document.write(car3.year);
+
+
+    </script>
+</body>
+</html>

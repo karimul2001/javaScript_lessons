@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Highest & Lowest Number Identify</h3>
+    <button onclick="min_max()">Ckick Here</button>
+    <script>
+        function min_max(){
+        let num1 = parseInt(prompt("Enter your Number 1"));
+        let num2 = parseInt(prompt("Enter your Number 2"));
+        let num3 = parseInt(prompt("Enter your Number 3"));
+        let num4 = parseInt(prompt("Enter your Number 4"));
+        let num5 = parseInt(prompt("Enter your Number 5"));
+
+        const numbers = [num1, num2, num3, num4, num5];
+
+        let max = numbers[0];
+        let min = numbers[0];
+
+        for(let i = 0; i<numbers.length; i++){
+            if(numbers[i]>max){
+                max = numbers[i];
+            }
+            if(numbers[i]<min){
+                min = numbers[i];
+            }
+        }
+       
+        document.write("Maximum Number: " + max + "<br>" + "Minimum Number: " + min);
+        }
+        
+
+    </script>
+</body>
+</html>
